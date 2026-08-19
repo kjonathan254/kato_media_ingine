@@ -87,6 +87,16 @@ export default function Slide5() {
                 </Reveal>
               ))}
             </div>
+            <Reveal delay={620} className="mt-9 border-l-2 border-gold pl-5">
+              <p className="font-mono text-[9px] uppercase tracking-[0.26em] text-gold">
+                Honesty note
+              </p>
+              <p className="mt-2 max-w-md text-sm leading-relaxed text-snow/70">
+                No invented targets. Pilot weeks 1–2 set the baselines; everything
+                after is measured change — and we expand only if the numbers
+                justify it.
+              </p>
+            </Reveal>
           </div>
 
           {/* the ask */}
