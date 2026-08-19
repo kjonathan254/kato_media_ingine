@@ -8,6 +8,7 @@ import {
 } from "./components/Chrome";
 import { useReducedMotion } from "./lib/motion";
 import Slide1 from "./slides/Slide1";
+import SlideJourney from "./slides/SlideJourney";
 import Slide2 from "./slides/Slide2";
 import Slide3 from "./slides/Slide3";
 import Slide4 from "./slides/Slide4";
@@ -15,10 +16,11 @@ import Slide5 from "./slides/Slide5";
 
 const SLIDES: SlideMeta[] = [
   { id: "page-1", num: "01", title: "The Opportunity", short: "Opportunity" },
-  { id: "page-2", num: "02", title: "What KATO Already Has", short: "Assets" },
-  { id: "page-3", num: "03", title: "The KATO Media Engine", short: "Engine" },
-  { id: "page-4", num: "04", title: "The 90-Day Pilot", short: "Pilot" },
-  { id: "page-5", num: "05", title: "Measurement & The Ask", short: "The Ask" },
+  { id: "page-journey", num: "02", title: "The Traveller Journey", short: "Journey" },
+  { id: "page-2", num: "03", title: "What KATO Already Has", short: "Assets" },
+  { id: "page-3", num: "04", title: "The KATO Media Engine", short: "Engine" },
+  { id: "page-4", num: "05", title: "The 90-Day Pilot", short: "Pilot" },
+  { id: "page-5", num: "06", title: "Measurement & The Ask", short: "The Ask" },
 ];
 
 export default function App() {
@@ -89,7 +91,7 @@ export default function App() {
       } else if (e.key === "End") {
         e.preventDefault();
         goTo(SLIDES.length - 1);
-      } else if (/^[1-5]$/.test(e.key)) {
+      } else if (/^[1-6]$/.test(e.key)) {
         goTo(Number(e.key) - 1);
       }
     };
@@ -106,6 +108,7 @@ export default function App() {
 
       <main>
         <Slide1 />
+        <SlideJourney />
         <Slide2 />
         <Slide3 />
         <Slide4 />

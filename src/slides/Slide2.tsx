@@ -86,11 +86,11 @@ export default function Slide2() {
   return (
     <section id="page-2" className="slide relative min-h-svh overflow-hidden bg-paper text-ink">
       <div className="blueprint pointer-events-none absolute inset-0" />
-      <Watermark num="02" tone="light" />
+      <Watermark num="03" tone="light" />
 
       <div className="relative mx-auto w-full max-w-7xl px-6 py-24 md:px-12 md:py-28">
         <Reveal>
-          <Kicker num="02" label="What KATO Already Has" tone="light" />
+          <Kicker num="03" label="What KATO Already Has" tone="light" />
         </Reveal>
 
         <div className="mt-10 flex flex-wrap items-end justify-between gap-10">
