@@ -30,6 +30,22 @@ function Connector({ delay }: { delay: number }) {
   );
 }
 
+/* ---------- member value loop ---------- */
+const MEMBER_LOOP = [
+  {
+    title: "Direct enquiries",
+    body: "Travellers arrive pre-sold on trust — members receive attributed leads, not cold traffic.",
+  },
+  {
+    title: "Produced visibility",
+    body: "Members appear inside premium content without running a media team of their own.",
+  },
+  {
+    title: "Shared distribution",
+    body: "One engine reaches audiences no single operator could afford to build alone.",
+  },
+];
+
 /* ---------- content architecture ---------- */
 const SHOWS = [
   {
@@ -134,6 +150,64 @@ export default function Slide3() {
             One pipeline · every member benefits
           </span>
           <span className="h-px flex-1 bg-snow/12" />
+        </Reveal>
+
+        {/* member value loop */}
+        <Reveal delay={140} className="mt-14 border border-snow/12 bg-ink/35 px-7 py-8 md:px-10">
+          <div className="flex flex-col gap-8 lg:flex-row lg:items-start lg:gap-12">
+            <div className="shrink-0 lg:w-60">
+              <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-gold">
+                The member value loop
+              </p>
+              <p className="mt-3 text-sm leading-relaxed text-snow/60">
+                Every piece of content ends where it began — with a KATO member
+                receiving the enquiry.
+              </p>
+            </div>
+            <div className="grid flex-1 gap-6 sm:grid-cols-3">
+              {MEMBER_LOOP.map((it, i) => (
+                <Reveal key={it.title} delay={i * 130} className="relative pl-5">
+                  <span className="absolute left-0 top-1.5 h-2 w-2 rotate-45 bg-gold" aria-hidden="true" />
+                  <h4 className="font-display text-lg font-semibold text-snow">
+                    {it.title}
+                  </h4>
+                  <p className="mt-1.5 text-[13px] leading-relaxed text-snow/60">
+                    {it.body}
+                  </p>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+          <Reveal delay={430} className="mt-5">
+            <svg
+              viewBox="0 0 1000 44"
+              preserveAspectRatio="none"
+              className="h-9 w-full"
+              aria-hidden="true"
+            >
+              <path
+                d="M990 8 H60 Q20 8 20 28"
+                fill="none"
+                stroke="var(--color-gold)"
+                strokeOpacity="0.65"
+                strokeWidth="1.5"
+                className="draw-path"
+                style={{ ["--len" as string]: 1010 }}
+              />
+              <path
+                d="M10 20 20 36 30 20"
+                fill="none"
+                stroke="var(--color-gold)"
+                strokeOpacity="0.9"
+                strokeWidth="1.5"
+                className="draw-path"
+                style={{ ["--len" as string]: 44, transitionDelay: "750ms" }}
+              />
+            </svg>
+            <p className="mt-1 text-right font-mono text-[9px] uppercase tracking-[0.26em] text-gold/80">
+              Value flows back to the member — the loop only KATO can own
+            </p>
+          </Reveal>
         </Reveal>
 
         {/* content architecture */}
