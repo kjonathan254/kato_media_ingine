@@ -23,11 +23,11 @@ export default function Slide5() {
   return (
     <section id="page-5" className="slide relative min-h-svh overflow-hidden bg-ink">
       <div className="topo pointer-events-none absolute inset-0" />
-      <Watermark num="05" tone="dark" />
+      <Watermark num="06" tone="dark" />
 
       <div className="relative mx-auto w-full max-w-7xl px-6 py-24 md:px-12 md:py-28">
         <Reveal>
-          <Kicker num="05" label="Measurement & The Ask" tone="dark" />
+          <Kicker num="06" label="Measurement & The Ask" tone="dark" />
         </Reveal>
 
         <h2 className="mt-10 max-w-4xl font-display text-4xl font-semibold leading-[1.02] text-snow md:text-6xl">

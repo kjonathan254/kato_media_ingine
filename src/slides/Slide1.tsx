@@ -23,7 +23,7 @@ export default function Slide1() {
         <Reveal className="mb-10 flex flex-wrap items-center gap-x-6 gap-y-2 font-mono text-[10px] uppercase tracking-[0.3em] text-goldpale/90">
           <span>Kenya Association of Tour Operators</span>
           <span className="hidden h-px w-16 bg-gold/50 sm:block" />
-          <span className="text-snow/55">Mini-pitch · 5 pages · read in 2 minutes</span>
+          <span className="text-snow/55">Mini-pitch · 6 pages · read in 2 minutes</span>
         </Reveal>
 
         <h1 className="font-display font-semibold leading-[0.95] text-snow">

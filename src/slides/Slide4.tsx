@@ -41,11 +41,11 @@ export default function Slide4() {
   return (
     <section id="page-4" className="slide relative min-h-svh overflow-hidden bg-paper text-ink">
       <div className="blueprint pointer-events-none absolute inset-0" />
-      <Watermark num="04" tone="light" />
+      <Watermark num="05" tone="light" />
 
       <div className="relative mx-auto w-full max-w-7xl px-6 py-24 md:px-12 md:py-28">
         <Reveal>
-          <Kicker num="04" label="The 90-Day Pilot" tone="light" />
+          <Kicker num="05" label="The 90-Day Pilot" tone="light" />
         </Reveal>
 
         <div className="mt-10 flex flex-wrap items-end justify-between gap-10">

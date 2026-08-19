@@ -59,11 +59,11 @@ export default function Slide3() {
   return (
     <section id="page-3" className="slide relative min-h-svh overflow-hidden bg-pine">
       <div className="topo pointer-events-none absolute inset-0" />
-      <Watermark num="03" tone="dark" />
+      <Watermark num="04" tone="dark" />
 
       <div className="relative mx-auto w-full max-w-7xl px-6 py-24 md:px-12 md:py-28">
         <Reveal>
-          <Kicker num="03" label="The KATO Media Engine" tone="dark" />
+          <Kicker num="04" label="The KATO Media Engine" tone="dark" />
         </Reveal>
 
         <h2 className="mt-10 font-display text-4xl font-semibold leading-[1.02] text-snow md:text-6xl">
