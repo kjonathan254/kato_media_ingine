@@ -183,6 +183,58 @@ body {
   animation: blinkDot 1.6s ease-in-out infinite;
 }
 
+/* ---------- print / PDF export ---------- */
+@page {
+  size: A4 landscape;
+  margin: 0;
+}
+
+@media print {
+  html {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+  }
+  body {
+    background: #0b1d14;
+    overflow: visible;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  [data-chrome],
+  .grain {
+    display: none !important;
+  }
+  .slide {
+    min-height: 100vh;
+    overflow: visible;
+    break-after: page;
+    break-inside: avoid;
+  }
+  .slide:last-of-type {
+    break-after: auto;
+  }
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .mask-line > span {
+    transform: none !important;
+    transition: none !important;
+  }
+  .draw-path {
+    stroke-dashoffset: 0 !important;
+    transition: none !important;
+  }
+  .kenburns,
+  .topo,
+  .cue-float,
+  .pulse-ring,
+  .blink-dot {
+    animation: none !important;
+  }
+}
+
 /* ---------- reduced motion ---------- */
 @media (prefers-reduced-motion: reduce) {
   html {

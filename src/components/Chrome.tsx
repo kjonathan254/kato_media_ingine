@@ -38,7 +38,7 @@ export function Monogram({ className }: { className?: string }) {
 /* ------------------------------------------------------------------ */
 export function ProgressBar({ value }: { value: number }) {
   return (
-    <div className="fixed left-0 top-0 z-[70] h-[3px] w-full bg-transparent">
+    <div data-chrome className="fixed left-0 top-0 z-[70] h-[3px] w-full bg-transparent">
       <div
         className="h-full bg-gold shadow-[0_0_12px_rgba(201,162,39,0.7)]"
         style={{ width: `${Math.round(value * 1000) / 10}%` }}
@@ -58,7 +58,7 @@ export function TopBar({
   onNav: (i: number) => void;
 }) {
   return (
-    <header className="pointer-events-none fixed inset-x-0 top-0 z-50">
+    <header data-chrome className="pointer-events-none fixed inset-x-0 top-0 z-50">
       <div className="flex h-14 items-center justify-between border-b border-gold/15 bg-ink/90 px-4 backdrop-blur-[3px] md:px-8">
         <button
           onClick={() => onNav(0)}
@@ -98,11 +98,24 @@ export function TopBar({
           ))}
         </nav>
 
-        <div className="pointer-events-auto flex items-center gap-2 border border-gold/30 px-3 py-1.5">
-          <span className="blink-dot h-1.5 w-1.5 rounded-full bg-goldbright" />
-          <span className="font-mono text-[9px] uppercase tracking-[0.22em] text-goldpale">
-            CEO Briefing · 2 min
-          </span>
+        <div className="pointer-events-auto flex items-center gap-2">
+          <button
+            type="button"
+            onClick={() => window.print()}
+            title="Export this briefing as a 5-page PDF"
+            className="flex items-center gap-2 border border-gold/60 bg-gold/10 px-3 py-1.5 font-mono text-[9px] uppercase tracking-[0.22em] text-goldbright transition-colors duration-300 hover:bg-gold hover:text-ink"
+          >
+            <svg viewBox="0 0 16 16" className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth="1.4" aria-hidden="true">
+              <path d="M4.5 6V1.5h7V6M4.5 12H2V6h12v6h-2.5M4.5 9.5h7v5h-7v-5Z" />
+            </svg>
+            Export PDF
+          </button>
+          <div className="hidden items-center gap-2 border border-gold/30 px-3 py-1.5 sm:flex">
+            <span className="blink-dot h-1.5 w-1.5 rounded-full bg-goldbright" />
+            <span className="font-mono text-[9px] uppercase tracking-[0.22em] text-goldpale">
+              CEO Briefing · 2 min
+            </span>
+          </div>
         </div>
       </div>
     </header>
@@ -121,6 +134,7 @@ export function SideRail({
 }) {
   return (
     <nav
+      data-chrome
       className="pointer-events-none fixed right-6 top-1/2 z-50 hidden -translate-y-1/2 flex-col items-end gap-4 md:flex"
       aria-label="Pages"
     >
@@ -158,7 +172,7 @@ export function SideRail({
 /* ------------------------------------------------------------------ */
 export function BottomBar({ active, total }: { active: number; total: number }) {
   return (
-    <div className="pointer-events-none fixed inset-x-0 bottom-0 z-40 hidden items-center justify-between px-8 pb-4 sm:flex">
+    <div data-chrome className="pointer-events-none fixed inset-x-0 bottom-0 z-40 hidden items-center justify-between px-8 pb-4 sm:flex">
       <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-snow/45">
         Page {String(active + 1).padStart(2, "0")} — {String(total).padStart(2, "0")}
       </span>
